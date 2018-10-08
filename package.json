@@ -8,10 +8,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name appDev",
-    "webpack": "webpack -wd",
+    "webpack": "./node_modules/.bin/webpack -wd",
     "test": "jest --watch",
     "verify-tests": "jest --coverage",
-    "build-webpack": "webpack -p",
+    "build-webpack": "./node_modules/.bin/webpack -p",
     "build-node": "babel lib -d build --copy-files",
     "start-prod": "NODE_ENV=production NODE_PATH=./build pm2 start build/server.js -i max --name appProd"
   },
