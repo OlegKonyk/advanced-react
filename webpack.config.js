@@ -2,9 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 
 const config = {
-    // resolve: {
-    //     modules: [path.resolve('./lib'), path.resolve('./node_modules')]
-    // },
+    resolve: {
+        modules: [path.resolve('./lib'), path.resolve('./node_modules')]
+    },
     // entry: {
     //     vendor: [
     //         'babel-polyfill',
@@ -17,7 +17,7 @@ const config = {
     //     ],
     //     app: ['./lib/renderers/dom.js']
     // },
-    entry: ['babel-polyfill', './lib/components/Index.js'],
+    entry: ['babel-polyfill', './lib/renderers/dom.js'],
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle.js'//'[name].js'
